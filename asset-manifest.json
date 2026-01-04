@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/RightHome.lk/static/css/main.744832f3.css",
+    "main.js": "/RightHome.lk/static/js/main.7d662bdd.js",
+    "index.html": "/RightHome.lk/index.html",
+    "main.744832f3.css.map": "/RightHome.lk/static/css/main.744832f3.css.map",
+    "main.7d662bdd.js.map": "/RightHome.lk/static/js/main.7d662bdd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.744832f3.css",
+    "static/js/main.7d662bdd.js"
+  ]
+}
