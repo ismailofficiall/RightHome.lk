@@ -9,20 +9,20 @@
       "description": "Luxury three-bedroom home situated along Marine Drive with stunning ocean views. Close to Bambalapitiya station and leading schools. The property comprises two reception halls, a modern pantry, and a rooftop terrace perfect for evening sunsets. Includes maid's quarters and secure parking.",
       "location": "Marine Drive, Colombo 04",
       "postcode": "Colombo 04",
-      "picture": "/images/prop1pic1small.jpg",
+      "picture": "images/prop1pic1small.jpg",
       "url": "properties/prop1.html",
       "added": { "month": "October", "day": 12, "year": 2025 },
       "fullDate": "2025-10-12",
       "images": [
-        "/images/prop1pic1.jpg",
-        "/images/prop1pic2.jpg",
-        "/images/prop1pic3.jpg",
-        "/images/prop1pic4.jpg",
-        "/images/prop1pic5.jpg",
-        "/images/prop1pic6.jpg"
+        "images/prop1pic1.jpg",
+        "images/prop1pic2.jpg",
+        "images/prop1pic3.jpg",
+        "images/prop1pic4.jpg",
+        "images/prop1pic5.jpg",
+        "images/prop1pic6.jpg"
       ],
-      "floorplan": "/images/floorplan1.jpg",
-      "map": "https://maps.google.com/maps?q=Marine+Drive+Colombo+04&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      "floorplan": "images/floorplan1.jpg",
+      "map": "https://maps.google.com/maps?q=Marine+Drive+Colombo+04&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
     {
       "id": "prop2",
@@ -33,20 +33,20 @@
       "description": "A modern two-bedroom beachfront apartment in Mount Lavinia. Features a large open-plan living area with timber flooring and a balcony overlooking the famous Mount Lavinia beach. The complex includes a swimming pool, gymnasium, and 24-hour security. Ideal for holiday rentals or a small family.",
       "location": "Hotel Road, Mount Lavinia",
       "postcode": "Mount Lavinia",
-      "picture": "/images/prop2pic1small.jpg",
+      "picture": "images/prop2pic1small.jpg",
       "url": "properties/prop2.html",
       "added": { "month": "August", "day": 14, "year": 2025 },
       "fullDate": "2025-08-14",
       "images": [
-        "/images/prop2pic1.jpg",
-        "/images/prop2pic2.jpg",
-        "/images/prop2pic3.jpg",
-        "/images/prop2pic4.jpg",
-        "/images/prop2pic5.jpg",
-        "/images/prop2pic6.jpg"
+        "images/prop2pic1.jpg",
+        "images/prop2pic2.jpg",
+        "images/prop2pic3.jpg",
+        "images/prop2pic4.jpg",
+        "images/prop2pic5.jpg",
+        "images/prop2pic6.jpg"
       ],
-      "floorplan": "/images/floorplan2.jpg",
-      "map": "https://maps.google.com/maps?q=Hotel+Road+Mount+Lavinia&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      "floorplan": "images/floorplan2.jpg",
+      "map": "https://maps.google.com/maps?q=Hotel+Road+Mount+Lavinia&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
     {
       "id": "prop3",
@@ -57,20 +57,20 @@
       "description": "Spacious four-bedroom detached house located in the cool hills of Kandy. Features a large landscaped garden, modern teak kitchen, and separate dining area. Just 10 minutes from the Temple of the Tooth and Peradeniya Botanical Gardens.",
       "location": "Peradeniya Road, Kandy",
       "postcode": "Kandy",
-      "picture": "/images/prop3pic1small.jpg",
+      "picture": "images/prop3pic1small.jpg",
       "url": "properties/prop3.html",
       "added": { "month": "March", "day": 5, "year": 2025 },
       "fullDate": "2025-03-05",
       "images": [
-        "/images/prop3pic1.jpg",
-        "/images/prop3pic2.jpg",
-        "/images/prop3pic3.jpg",
-        "/images/prop3pic4.jpg",
-        "/images/prop3pic5.jpg",
-        "/images/prop3pic6.jpg"
+        "images/prop3pic1.jpg",
+        "images/prop3pic2.jpg",
+        "images/prop3pic3.jpg",
+        "images/prop3pic4.jpg",
+        "images/prop3pic5.jpg",
+        "images/prop3pic6.jpg"
       ],
-      "floorplan": "/images/floorplan3.jpg",
-      "map": "https://maps.google.com/maps?q=Peradeniya+Road+Kandy&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      "floorplan": "images/floorplan3.jpg",
+      "map": "https://maps.google.com/maps?q=Peradeniya+Road+Kandy&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
     {
       "id": "prop4",
@@ -81,20 +81,20 @@
       "description": "Stylish one-bedroom apartment in Havelock City. Offers premium city living with access to the clubhouse, swimming pools, and the new mall. Perfect for professionals working in Colombo. High-speed fiber internet and AC installed.",
       "location": "Havelock City, Colombo 05",
       "postcode": "Colombo 05",
-      "picture": "/images/prop4pic1small.jpg",
+      "picture": "images/prop4pic1small.jpg",
       "url": "properties/prop4.html",
       "added": { "month": "December", "day": 1, "year": 2024 },
       "fullDate": "2024-12-01",
       "images": [
-        "/images/prop4pic1.jpg",
-        "/images/prop4pic2.jpg",
-        "/images/prop4pic3.jpg",
-        "/images/prop4pic4.jpg",
-        "/images/prop4pic5.jpg",
-        "/images/prop4pic6.jpg"
+        "images/prop4pic1.jpg",
+        "images/prop4pic2.jpg",
+        "images/prop4pic3.jpg",
+        "images/prop4pic4.jpg",
+        "images/prop4pic5.jpg",
+        "images/prop4pic6.jpg"
       ],
-      "floorplan": "/images/floorplan4.jpg",
-      "map": "https://maps.google.com/maps?q=Havelock+City+Colombo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      "floorplan": "images/floorplan4.jpg",
+      "map": "https://maps.google.com/maps?q=Havelock+City+Colombo&t=&z=16&ie=UTF8&iwloc=&output=embed"
     },
     {
       "id": "prop5",
@@ -105,20 +105,20 @@
       "description": "Prestigious five-bedroom colonial-style bungalow in Cinnamon Gardens. Features a private swimming pool, expansive lawn, and servant quarters. Walking distance to Viharamahadevi Park and Odel. The ultimate address in Colombo.",
       "location": "Gregory's Road, Colombo 07",
       "postcode": "Colombo 07",
-      "picture": "/images/prop5pic1small.jpg",
+      "picture": "images/prop5pic1small.jpg",
       "url": "properties/prop5.html",
       "added": { "month": "November", "day": 22, "year": 2025 },
       "fullDate": "2025-11-22",
       "images": [
-        "/images/prop5pic1.jpg",
-        "/images/prop5pic2.jpg",
-        "/images/prop5pic3.jpg",
-        "/images/prop5pic4.jpg",
-        "/images/prop5pic5.jpg",
-        "/images/prop5pic6.jpg"
+        "images/prop5pic1.jpg",
+        "images/prop5pic2.jpg",
+        "images/prop5pic3.jpg",
+        "images/prop5pic4.jpg",
+        "images/prop5pic5.jpg",
+        "images/prop5pic6.jpg"
       ],
-      "floorplan": "/images/floorplan5.jpg",
-      "map": "https://maps.google.com/maps?q=Gregorys+Road+Colombo+07&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      "floorplan": "images/floorplan5.jpg",
+      "map": "https://maps.google.com/maps?q=Gregorys+Road+Colombo+07&t=&z=16&ie=UTF8&iwloc=&output=embed"
     },
     {
       "id": "prop6",
@@ -129,20 +129,20 @@
       "description": "Two-bedroom apartment in the heart of the tourist strip in Negombo. Fully furnished with modern interiors and a balcony facing the Indian Ocean. Excellent investment opportunity for Airbnb rentals due to proximity to the airport.",
       "location": "Porutota Road, Negombo",
       "postcode": "Negombo",
-      "picture": "/images/prop6pic1small.jpg",
+      "picture": "images/prop6pic1small.jpg",
       "url": "properties/prop6.html",
       "added": { "month": "January", "day": 18, "year": 2025 },
       "fullDate": "2025-01-18",
       "images": [
-        "/images/prop6pic1.jpg",
-        "/images/prop6pic2.jpg",
-        "/images/prop6pic3.jpg",
-        "/images/prop6pic4.jpg",
-        "/images/prop6pic5.jpg",
-        "/images/prop6pic6.jpg"
+        "images/prop6pic1.jpg",
+        "images/prop6pic2.jpg",
+        "images/prop6pic3.jpg",
+        "images/prop6pic4.jpg",
+        "images/prop6pic5.jpg",
+        "images/prop6pic6.jpg"
       ],
-      "floorplan": "/images/floorplan6.jpg",
-      "map": "https://maps.google.com/maps?q=Porutota+Road+Negombo&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      "floorplan": "images/floorplan6.jpg",
+      "map": "https://maps.google.com/maps?q=Porutota+Road+Negombo&t=&z=15&ie=UTF8&iwloc=&output=embed"
     },
     {
       "id": "prop7",
@@ -153,20 +153,20 @@
       "description": "Charming three-bedroom house near Parliament Road, Battaramulla. Features a quiet garden setting, office room, and solar power system. Close to jogging tracks and supermarkets.",
       "location": "Parliament Road, Battaramulla",
       "postcode": "Battaramulla",
-      "picture": "/images/prop7pic1small.jpg",
+      "picture": "images/prop7pic1small.jpg",
       "url": "properties/prop7.html",
       "added": { "month": "September", "day": 28, "year": 2024 },
       "fullDate": "2024-09-28",
       "images": [
-        "/images/prop7pic1.jpg",
-        "/images/prop7pic2.jpg",
-        "/images/prop7pic3.jpg",
-        "/images/prop7pic4.jpg",
-        "/images/prop7pic5.jpg",
-        "/images/prop7pic6.jpg"
+        "images/prop7pic1.jpg",
+        "images/prop7pic2.jpg",
+        "images/prop7pic3.jpg",
+        "images/prop7pic4.jpg",
+        "images/prop7pic5.jpg",
+        "images/prop7pic6.jpg"
       ],
-      "floorplan": "/images/floorplan7.jpg",
-      "map": "https://maps.google.com/maps?q=Parliament+Road+Battaramulla&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      "floorplan": "images/floorplan7.jpg",
+      "map": "https://maps.google.com/maps?q=Parliament+Road+Battaramulla&t=&z=15&ie=UTF8&iwloc=&output=embed"
     }
   ]
 }
