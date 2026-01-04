@@ -10,6 +10,9 @@ function PropertyCard({ property, addToFavourites }) {
     }),
   }));
 
+  // Helper to construct image path
+  const imgPath = property.images?.[0] || property.picture;
+
   return (
     <div
       ref={drag}
@@ -30,7 +33,7 @@ function PropertyCard({ property, addToFavourites }) {
         style={{ textDecoration: "none", color: "inherit" }}
       >
         <img
-          src={property.images?.[0] || property.picture}
+          src={process.env.PUBLIC_URL + "/" + imgPath}
           alt={property.type}
           style={{
             width: "100%",

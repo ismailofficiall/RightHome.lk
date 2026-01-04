@@ -29,17 +29,19 @@ function PropertyPage({ properties, addToFavourites }) {
         </div>
 
         <div className="gallery-section">
+            {/* FIX: Add process.env.PUBLIC_URL to Main Image */}
             <img 
-              src={mainImage} 
+              src={process.env.PUBLIC_URL + "/" + mainImage} 
               alt="Main" 
               className="main-image" 
               style={{ width: "100%", maxHeight: "400px", objectFit: "cover", borderRadius: "10px" }}
             />
             <div className="thumbnails" style={{ display: "flex", gap: "10px", marginTop: "10px", overflowX: "auto" }}>
                 {property.images && property.images.map((img, index) => (
+                    // FIX: Add process.env.PUBLIC_URL to Thumbnail Images
                     <img
                         key={index}
-                        src={img}
+                        src={process.env.PUBLIC_URL + "/" + img}
                         alt={`thumb-${index}`}
                         onClick={() => setMainImage(img)}
                         style={{ 
@@ -93,8 +95,9 @@ function PropertyPage({ properties, addToFavourites }) {
                 )}
 
                 {activeTab === "floorplan" && (
+
                     <img 
-                      src={property.floorplan || "https://via.placeholder.com/600x400?text=No+Floorplan+Available"} 
+                      src={property.floorplan ? (process.env.PUBLIC_URL + "/" + property.floorplan) : "https://via.placeholder.com/600x400?text=No+Floorplan+Available"} 
                       alt="Floorplan" 
                       style={{ width: "100%", maxWidth: "600px" }}
                     />
@@ -102,7 +105,6 @@ function PropertyPage({ properties, addToFavourites }) {
 
                 {activeTab === "map" && (
                     <div style={{ height: "400px", width: "100%", background: "#eee", borderRadius: "10px", overflow: "hidden" }}>
-                        {/* UPDATED: GOOGLE MAPS IFRAME USING JSON DATA */}
                         <iframe
                             width="100%"
                             height="100%"

@@ -29,9 +29,8 @@ function Favourites({ favourites, removeFromFavourites, addToFavourites, clearFa
         <div className="fav-list">
           {favourites.map((property) => (
             <div key={property.id} className="fav-item">
-              {/* FIX: Try to use the first image from the array, fallback to picture */}
               <img 
-                src={property.images?.[0] || property.picture} 
+                src={process.env.PUBLIC_URL + "/" + (property.images?.[0] || property.picture)} 
                 alt="thumb" 
               />
               <div>
