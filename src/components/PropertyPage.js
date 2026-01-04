@@ -6,7 +6,18 @@ function PropertyPage({ properties, addToFavourites }) {
   const navigate = useNavigate();
   const property = properties.find((p) => p.id === id);
 
-  // Fallback to picture if images array is empty or undefined
+  // 1. ROBUST IMAGE LOADER HELPER
+  // This fixes the path whether it has a '/' at the start or not
+  const getImageUrl = (path) => {
+    if (!path) return "";
+    if (path.startsWith("http")) return path; // If it's a google map or external link
+    
+    // Remove slash from start if it exists to avoid double slashes
+    const cleanPath = path.startsWith("/") ? path.slice(1) : path;
+    return process.env.PUBLIC_URL + "/" + cleanPath;
+  };
+
+  // Fallback to picture if images array is empty
   const [mainImage, setMainImage] = useState(property?.images?.[0] || property?.picture);
   const [activeTab, setActiveTab] = useState("description");
 
@@ -29,19 +40,19 @@ function PropertyPage({ properties, addToFavourites }) {
         </div>
 
         <div className="gallery-section">
-            {/* FIX: Add process.env.PUBLIC_URL to Main Image */}
+            {/* USE HELPER FUNCTION HERE */}
             <img 
-              src={process.env.PUBLIC_URL + "/" + mainImage} 
+              src={getImageUrl(mainImage)} 
               alt="Main" 
               className="main-image" 
               style={{ width: "100%", maxHeight: "400px", objectFit: "cover", borderRadius: "10px" }}
             />
             <div className="thumbnails" style={{ display: "flex", gap: "10px", marginTop: "10px", overflowX: "auto" }}>
                 {property.images && property.images.map((img, index) => (
-                    // FIX: Add process.env.PUBLIC_URL to Thumbnail Images
+                    // USE HELPER FUNCTION HERE
                     <img
                         key={index}
-                        src={process.env.PUBLIC_URL + "/" + img}
+                        src={getImageUrl(img)}
                         alt={`thumb-${index}`}
                         onClick={() => setMainImage(img)}
                         style={{ 
@@ -95,9 +106,9 @@ function PropertyPage({ properties, addToFavourites }) {
                 )}
 
                 {activeTab === "floorplan" && (
-
+                    // USE HELPER FUNCTION HERE
                     <img 
-                      src={property.floorplan ? (process.env.PUBLIC_URL + "/" + property.floorplan) : "https://via.placeholder.com/600x400?text=No+Floorplan+Available"} 
+                      src={property.floorplan ? getImageUrl(property.floorplan) : "https://via.placeholder.com/600x400?text=No+Floorplan+Available"} 
                       alt="Floorplan" 
                       style={{ width: "100%", maxWidth: "600px" }}
                     />
