@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/RightHome.lk/static/css/main.744832f3.css",
-    "main.js": "/RightHome.lk/static/js/main.8f94500f.js",
+    "main.js": "/RightHome.lk/static/js/main.dcbc3147.js",
     "index.html": "/RightHome.lk/index.html",
     "main.744832f3.css.map": "/RightHome.lk/static/css/main.744832f3.css.map",
-    "main.8f94500f.js.map": "/RightHome.lk/static/js/main.8f94500f.js.map"
+    "main.dcbc3147.js.map": "/RightHome.lk/static/js/main.dcbc3147.js.map"
   },
   "entrypoints": [
     "static/css/main.744832f3.css",
-    "static/js/main.8f94500f.js"
+    "static/js/main.dcbc3147.js"
   ]
 }
