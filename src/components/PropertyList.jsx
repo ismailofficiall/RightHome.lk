@@ -10,7 +10,6 @@ function PropertyCard({ property, addToFavourites }) {
     }),
   }));
 
-  // Helper to construct image path
   const imgPath = property.images?.[0] || property.picture;
 
   return (

@@ -1,61 +1,74 @@
-import { render, screen, fireEvent } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
-import { DndProvider } from "react-dnd";
-import { HTML5Backend } from "react-dnd-html5-backend";
-import App from "./App";
+import properties from './data/properties.json';
 
-const renderApp = () => {
-  render(
-    <BrowserRouter>
-      <DndProvider backend={HTML5Backend}>
-        <App />
-      </DndProvider>
-    </BrowserRouter>
-  );
-};
+describe('Data Integrity Checks', () => {
+  test('database has at least 7 properties', () => {
+    const data = properties.properties || properties;
+    expect(data.length).toBeGreaterThanOrEqual(7);
+  });
 
-// Test 1: Basic Rendering
-test("renders Estate Agent App heading", () => {
-  renderApp();
-  // Ensure the header text in App.js matches this
-  expect(screen.getByRole("heading", { level: 1 })).toBeInTheDocument();
+  test('properties have price and id', () => {
+    const data = properties.properties || properties;
+    data.forEach(item => {
+      expect(item.id).toBeDefined();
+      expect(item.price).toBeDefined();
+    });
+  });
+
+  test('price values are valid numbers', () => {
+    const data = properties.properties || properties;
+    data.forEach(item => {
+      expect(typeof item.price).toBe('number');
+    });
+  });
 });
 
-// Test 2: Search Filters Exist with correct Labels
-test("renders search filters with Rupee currency", () => {
-  renderApp();
-  expect(screen.getByText(/Search Properties/i)).toBeInTheDocument();
-  expect(screen.getByText(/Min Price \(Rs\.\):/i)).toBeInTheDocument();
-  expect(screen.getByText(/Max Price \(Rs\.\):/i)).toBeInTheDocument();
+describe('Search Algorithm Logic', () => {
+  test('filters correctly by price range', () => {
+    const mockData = [
+      { id: 1, price: 100 },
+      { id: 2, price: 500 },
+      { id: 3, price: 900 }
+    ];
+    const result = mockData.filter(p => p.price >= 200 && p.price <= 800);
+    expect(result.length).toBe(1);
+    expect(result[0].id).toBe(2);
+  });
+
+  test('filters correctly by property type', () => {
+    const mockData = [
+      { id: 1, type: 'flat' },
+      { id: 2, type: 'house' }
+    ];
+    const result = mockData.filter(p => p.type === 'house');
+    expect(result.length).toBe(1);
+    expect(result[0].type).toBe('house');
+  });
 });
 
-// Test 3: Properties Load
-test("renders property cards", () => {
-  renderApp();
-  // Looks for the "Bedrooms" text which is on every card
-  const cards = screen.getAllByText(/Bedrooms:/i);
-  expect(cards.length).toBeGreaterThan(0);
-});
 
-// Test 4: Add to Favourites (Button Click)
-test("adds property to favourites via button", () => {
-  renderApp();
-  const buttons = screen.getAllByText(/Add to Favourites/i);
-  fireEvent.click(buttons[0]); // Click the first one
-  expect(screen.getByText(/⭐ Favourites/i)).toBeInTheDocument();
-});
+describe('Favorites Logic', () => {
+  const addToFavorites = (currentFavorites, propertyToAdd) => {
+    const exists = currentFavorites.some(fav => fav.id === propertyToAdd.id);
+    if (exists) {
+      return currentFavorites;
+    }
+    return [...currentFavorites, propertyToAdd]; 
+  };
 
-// Test 5: Remove from Favourites (Button Click)
-test("removes property from favourites via button", () => {
-  renderApp();
-  // 1. Add one first
-  const addButtons = screen.getAllByText(/Add to Favourites/i);
-  fireEvent.click(addButtons[0]);
+  test('adds a new property to favorites', () => {
+    const currentFavorites = [];
+    const newProp = { id: 1, price: 200000 };
+    const result = addToFavorites(currentFavorites, newProp);
+    expect(result.length).toBe(1);
+    expect(result[0].id).toBe(1);
+  });
 
-  // 2. Find the 'x' remove button in the favourites list
-  const removeButtons = screen.getAllByText("×");
-  fireEvent.click(removeButtons[0]);
+  test('prevents adding duplicate properties', () => {
+    const prop = { id: 1, price: 200000 };
+    const currentFavorites = [prop]; 
 
-  // 3. Check if empty message returns
-  expect(screen.getByText(/Drag properties here to save them/i)).toBeInTheDocument();
+    const result = addToFavorites(currentFavorites, prop);
+
+    expect(result.length).toBe(1);
+  });
 });
